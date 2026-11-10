@@ -1,18 +1,18 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { App } from './app';
+import { VideoModule } from './video/video-module';
 
 @NgModule({
   declarations: [
     App
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    VideoModule
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideClientHydration(),
-  ],
+  providers: [],
   bootstrap: [App]
 })
 export class AppModule { }
